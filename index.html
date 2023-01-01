@@ -69,7 +69,7 @@
             transform: translateX(0);
         }
         to {
-            transform: translateX(80vw);
+            transform: translateX(70vw);
         }
     }
     .pig{
@@ -93,7 +93,15 @@
         background-image: url(./images/pig2.png);
         animation-duration: 3s;
     }
-
+    .pig:nth-of-type(3){
+        left: 15%;
+        bottom:9%;
+        background-image: url(./images/pig3.png);
+        animation-duration: 1s;
+    }
+    .invisible{
+        display: none;
+    }
 </style>
 <body>
     <section class="stage">
@@ -101,6 +109,22 @@
         </div>
         <div class="pig">
         </div>
+        <div class="pig">
+        </div>
     </section>
+    <script>
+        (function(){
+            const stage = document.querySelector('.stage');
+            const pigs = document.querySelectorAll('.pig');
+            function clickHandler(e){
+                const target = e.target; 
+                if(target.classList.contains('pig')){
+                    target.classList.add('invisible');
+                }   
+            }
+            stage.addEventListener('click', clickHandler);
+
+        })();
+    </script>
 </body>
 </html>
