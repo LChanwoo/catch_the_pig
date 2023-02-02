@@ -58,8 +58,10 @@
 </style>
 <style>
     .stage{
+        align-items: center;
+        justify-content: center;
         width: 100vw;
-        height: 75vw;
+        height: 80vh;
         background-color: yellow;
         position: relative;
         overflow: hidden;
@@ -80,6 +82,10 @@
         background-position: 50% 50%;
         background-size: contain;
         animation: moving 3s infinite alternate;
+        animation-duration: 4s;
+        background-image: url(./images/pig1.png);
+        left: 5%;
+        bottom:5%;
     }
     .pig:nth-of-type(1){
         left: 5%;
@@ -109,9 +115,9 @@
         </div>
         <div class="pig">
         </div>
-        <div class="pig">
-        </div>
-    </section>
+        <div class="pig"> </div>
+        <div class="pig"> </div>
+
     <script>
         (function(){
             const stage = document.querySelector('.stage');
